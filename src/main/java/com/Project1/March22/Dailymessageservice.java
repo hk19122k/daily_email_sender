@@ -16,8 +16,8 @@ public class Dailymessageservice {
     @Autowired
     private JavaMailSender mailSender;
 
-    //@Scheduled(cron = "0 0 9 * * ?")
-    @Scheduled(fixedRate = 60000)
+    @Scheduled(cron = "0 0 9 * * ?")
+   
     public void sendDailyMessage() {
         try {
             MimeMessage message = mailSender.createMimeMessage();
